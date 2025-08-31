@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://itsb0oryebt7"]
+[gd_scene load_steps=10 format=3 uid="uid://itsb0oryebt7"]
 
 [ext_resource type="PackedScene" uid="uid://c44di13nlv62h" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="TileSet" uid="uid://c4fxkplsuh7ef" path="res://SAMURAIADAPTED/GrassDirtGenericTileSet.tres" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://du5i7kduvy3s7" path="res://platform.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bawy1ivxlbcyj" path="res://killzone.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://c4d7kxs2hlq20" path="res://enemy.tscn" id="5_7jktm"]
 
 [sub_resource type="Animation" id="Animation_fc0e3"]
 resource_name = "new_animation"
@@ -75,3 +76,6 @@ autoplay = "new_animation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-16, 67)
 shape = SubResource("WorldBoundaryShape2D_7jktm")
+
+[node name="Enemy" parent="Killzone" instance=ExtResource("5_7jktm")]
+position = Vector2(126, 4)
