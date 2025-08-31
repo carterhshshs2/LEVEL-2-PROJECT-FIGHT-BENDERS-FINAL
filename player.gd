@@ -37,6 +37,8 @@ func _physics_process(delta: float) -> void:
 		playeranimated.play("default")
 		
 
+		
+
 	
 	
 	if direction:

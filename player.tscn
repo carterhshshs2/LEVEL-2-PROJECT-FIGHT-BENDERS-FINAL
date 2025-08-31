@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c44di13nlv62h"]
+[gd_scene load_steps=54 format=3 uid="uid://c44di13nlv62h"]
 
 [ext_resource type="Texture2D" uid="uid://23i2gr4f12w6" path="res://SAMURAIADAPTED/IDLE.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://baf1pbwaqj6hr" path="res://player.gd" id="1_onrkg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blvo2ed56t25e" path="res://SAMURAIADAPTED/AIRATTACK.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://b2m5hkwnd10x4" path="res://SAMURAIADAPTED/HURT.png" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://dnqm71l7xxn4r" path="res://SAMURAIADAPTED/RUN.png" id="6_2hs0m"]
+[ext_resource type="Script" uid="uid://d28twex76kygh" path="res://area_2d.gd" id="7_1jxqw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7lmhl"]
 atlas = ExtResource("2_sweqy")
@@ -347,6 +348,7 @@ animations = [{
 size = Vector2(9, 31)
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_onrkg")
 
 [node name="Playeranimated" type="AnimatedSprite2D" parent="."]
@@ -357,3 +359,6 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 17.5)
 shape = SubResource("RectangleShape2D_urp6f")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("7_1jxqw")

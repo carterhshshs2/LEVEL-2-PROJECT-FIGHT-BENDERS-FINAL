@@ -15,6 +15,7 @@ func _process(delta):
 		animated_sprite_2d.flip_h = true
 	if ray_cast_left.is_colliding():
 		direction = 1
+		animated_sprite_2d.flip_h = false
 	
 	position.x += direction * SPEED * delta
 	
