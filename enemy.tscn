@@ -64,3 +64,11 @@ collision_mask = 4
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-11, 0)
 collision_mask = 4
+
+[node name="RaycastBottomleft" type="RayCast2D" parent="."]
+target_position = Vector2(-10, 12)
+collision_mask = 4
+
+[node name="RaycastBottomright" type="RayCast2D" parent="."]
+target_position = Vector2(10, 12)
+collision_mask = 4
